@@ -1,8 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 interface PortfolioEntryProp{
     title: string;
     date: Date;
+    link: string;
 }
 
 const PortfolioEntry = (props: PortfolioEntryProp) => {
@@ -12,6 +14,7 @@ const PortfolioEntry = (props: PortfolioEntryProp) => {
     <div>PortfolioEntry</div>
     <p>Title: {props.title}</p>
     <p>Date: {dateString}</p>
+    <NavLink to={props.link}>Link</NavLink>
 </>
   )
 }

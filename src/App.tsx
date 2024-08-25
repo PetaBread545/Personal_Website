@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import Layout from './layout/Layout';
+import SentimentAnalysis from './pages/portfolio-pages/SentimentAnalysis';
 
 import {
   Route,
@@ -21,7 +22,9 @@ const App = () => {
       <Route path='/' element={<Layout />} >
         <Route index element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
-        <Route path='/portfolio' element={<PortfolioPage />} />
+        <Route path='/portfolio' element={<PortfolioPage />}> 
+          <Route path='/portfolio/sentiment' element={<SentimentAnalysis />} />
+        </Route>
         <Route path='/blog' element={<BlogPage />} />
         <Route path='/contact' element={<ContactPage />} />
       </Route>
